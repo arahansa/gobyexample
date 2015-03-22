@@ -1,15 +1,21 @@
 ## Go by Example
+[Go by Example](https://gobyexample.com)을 위한 내용,  툴체인, 웹서버
 
-Content, toolchain, and web server for [Go by Example](https://gobyexample.com).
 
 
-### Overview
+### 개요
+
+예제파일들에서 코드와 주석을 뽑아 Go by Example site 는 만들어졌으며, 
+사이트 `templates`를 통해서 그 데이터들을 렌더링 하였습니다. 
+이러한 빌드 프로세스를 구현하는 프로그램은 `tools` 에 있습니다. 
 
 The Go by Example site is built by extracting code &
 comments from source files in `examples` and rendering
 that data via the site `templates`. The programs
 implementing this build process are in `tools`.
 
+빌드프로세스는 현대HTTP 서버를 운영하는데 적합한 정적파일들의 디렉터리  `public` 을 생성합니다. 
+우리는 `server.go` 에 경령화 Go Server를 포함합니다. 
 The build process produces a directory of static files -
 `public` - suitable for serving by any modern HTTP server.
 We include a lightweight Go server in `server.go`.
